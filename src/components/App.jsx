@@ -56,8 +56,8 @@ export class App extends Component {
 
   render() {
     const contacts = this.state.filter
-      ? this.state.filteredContacts
-      : this.state.contacts;
+    ? this.state.filteredContacts
+    : this.state.contacts;
     return (
       <Wrapper>
         <h1>Phonebook</h1>
@@ -67,7 +67,8 @@ export class App extends Component {
           onFindName={this.handleFindName}
           valueFilter={this.state.filter}
         />
-        <ContactList contacts={contacts} onClickDelete={this.handleDelete} />
+        <ContactList contacts={contacts} 
+    onClickDelete={this.handleDelete} />
       </Wrapper>
     );
   }
