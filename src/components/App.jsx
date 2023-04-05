@@ -20,27 +20,23 @@ export class App extends Component {
     };
 
     //let updatedContacts;
-    //const newContactName = this.state.contacts.find(
-      //contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
-    //);
+    //addContact = newContact => {
+      const { contacts } =this.state;
+    const newContactName = contacts.some(
+      contact => contact.name.toLowerCase() === newContactName.name.toLowerCase() || 
+      contact.number === newContactName.number
+    );
+
+if  (newContactName) {
+    alert(`${newContactName.name} is already in contacts.`);
+    return;
+}
+    //}
 
   this.setState(prevState => {
     return { contacts: [contact, ...prevState.contacts] };
   });
   };
-
-    //if (newContactName) {
-      //return alert(`${newContact.name} is already in contacts.`);
-    //} else {
-    //updatedContacts = [...this.state.contacts, newContact];
-      //this.setState({
-        //contacts: updatedContacts,
-        //name: '',
-        //number: '',
-        //filter: '',
-      //});
-    //}
-  //};
 
 deleteContact = id => {
     this.setState(prevState => ({
