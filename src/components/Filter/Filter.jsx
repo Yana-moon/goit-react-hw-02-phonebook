@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { TextFilter, InputFilter, WrapperFilter } from './Filter.styled';
-export const Filter = ({ onFindName, valueFilter }) => {
+export const Filter = ({ onChangeFilter, valueFilter }) => {
   return (
     <WrapperFilter>
       <TextFilter>Find Contacts by name</TextFilter>
@@ -10,7 +10,7 @@ export const Filter = ({ onFindName, valueFilter }) => {
           type="text"
           name="filter"
           placeholder="Enter name"
-          onChange={onFindName}
+          onChange={onChangeFilter}
           value={valueFilter}
         />
       </label>
@@ -19,6 +19,6 @@ export const Filter = ({ onFindName, valueFilter }) => {
 };
 
 Filter.propTypes = {
-  onFindName: PropTypes.func.isRequired,
+  onChangeFilter: PropTypes.func.isRequired,
   valueFilter: PropTypes.string.isRequired,
 };
