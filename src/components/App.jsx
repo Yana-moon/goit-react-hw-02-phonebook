@@ -23,8 +23,8 @@ export class App extends Component {
     //addContact = newContact => {
       const { contacts } =this.state;
     const newContactName = contacts.some(
-      contact => contact.name.toLowerCase() === newContactName.name.toLowerCase() || 
-      contact.number === newContactName.number
+      contact => contact.name.toLowerCase() === name.toLowerCase() || 
+      contact.number === number
     );
 
 if  (newContactName) {
