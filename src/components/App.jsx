@@ -12,7 +12,7 @@ export class App extends Component {
     filter: '',
   };
 
-  AddContact = ( name, number ) => {
+  addContact = ( name, number ) => {
     const contact = {
       id: nanoid(),
       name,
